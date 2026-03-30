@@ -24,6 +24,12 @@ Generate a Next.js plugin from API documentation.
 
 - `--name <plugin-name>` (可选): 指定插件项目名称，默认为 `addon-project`
 
+## API 认证约束
+
+- Token 通过 URL Query 参数传递：`?token=xxx`
+- 请求接口时使用：`Authorization: Bearer <token>` Header
+- 如果接口无认证需求，则不使用 Token
+
 ## UI 风格约束
 
 生成的项目必须遵循以下设计规范：
