@@ -11,7 +11,7 @@ Generate a Next.js plugin from API documentation.
 
 ## 使用方式
 
-`/addon <api-doc-or-url> [--deploy] [--name <plugin-name>]`
+`/addon-generator <api-doc-or-url> [--deploy] [--name <plugin-name>]`
 
 ## 参数说明
 
@@ -37,9 +37,9 @@ Generate a Next.js plugin from API documentation.
 ## 使用示例
 
 ```
-/addon https://petstore.swagger.io/v2/swagger.json --deploy --name my-pet-store
+/addon-generator https://petstore.swagger.io/v2/swagger.json --deploy --name my-pet-store
 ```
 
 ```
-/addon curl -X GET "https://api.example.com/users" -H "Authorization: Bearer token" --deploy
+/addon-generator curl -X GET "https://api.example.com/users" -H "Authorization: Bearer token" --deploy
 ```

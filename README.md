@@ -10,14 +10,14 @@
 /plugin install addon-generator
 ```
 
-安装后即可使用 `/addon` 命令。
+安装后即可使用 `/addon-generator` 命令。
 
 ## 使用方式
 
 在 Claude Code 中使用：
 
 ```
-/addon <api-doc-or-url> [--deploy] [--name <plugin-name>]
+/addon-generator <api-doc-or-url> [--deploy] [--name <plugin-name>]
 ```
 
 ### 参数说明
@@ -32,13 +32,13 @@
 
 ```bash
 # 根据 curl 命令生成
-/addon curl -X GET "https://api.example.com/users" -H "Authorization: Bearer token" --deploy
+/addon-generator curl -X GET "https://api.example.com/users" -H "Authorization: Bearer token" --deploy
 
 # 根据 OpenAPI 文档生成
-/addon https://petstore.swagger.io/v2/swagger.json --name my-pet-store
+/addon-generator https://petstore.swagger.io/v2/swagger.json --name my-pet-store
 
 # 根据自然语言描述生成
-/addon 这是一个用户管理 API，包含登录、注册、获取用户信息接口
+/addon-generator 这是一个用户管理 API，包含登录、注册、获取用户信息接口
 ```
 
 ## 工作流程
