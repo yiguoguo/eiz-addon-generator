@@ -42,14 +42,25 @@ description: EIZ 业务数据查询助手。收到用户的数据查询需求后
 
 ## 第二步：确认表结构（首次或不确定时）
 
-使用 `mysql-search_objects` 和 `mysql-execute_sql` 执行：
+使用 `mysql-search_objects` 查询表结构：
 
-```sql
-DESCRIBE 表名;
-SHOW INDEX FROM 表名;
+```bash
+# 查看某个表的所有列
+object_type: "column", table: "表名"
+
+# 查看某个表的索引
+object_type: "index", table: "表名"
+
+# 模糊搜索表名
+object_type: "table", pattern: "%关键词%"
+
+# 查看表的详细信息（包括列定义）
+object_type: "table", pattern: "表名", detail_level: "full"
 ```
 
 确认字段名和索引后再写正式查询。
+
+如果知识库中已有表结构说明，优先参考知识库内容。
 
 ## 第三步：选择查询方式
 

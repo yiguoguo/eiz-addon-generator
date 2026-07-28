@@ -10,7 +10,7 @@
       "name": "eiz-claude-skills",
       "source": "./",
       "strict": false,
-      "version": "1.4.3",
+      "version": "1.4.4",
       "author": { "name": "Yi Wang" },
       "skills": [
         "./skills/addon-generator",
