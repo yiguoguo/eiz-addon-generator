@@ -4,10 +4,37 @@
 
 ## 安装
 
+在 Claude Code 会话中执行：
+
 ```bash
 /plugin marketplace add yiguoguo/eiz-claude-plugins
 /plugin install eiz-claude-plugins@eiz-claude-plugins
 ```
+
+安装完成后，插件中的 skill 使用 `eiz-claude-plugins:` 命名空间。
+
+如果之前安装过旧版 `eiz-claude-skills`，建议先安装新版并确认可用，再移除旧 marketplace：
+
+```text
+/plugin uninstall eiz-claude-skills@eiz-claude-skills
+/plugin marketplace remove eiz-claude-skills
+```
+
+## MCP 配置
+
+插件根目录的 `.mcp.json` 已内置 EIZ Remote MCP，无需手动执行 `claude mcp add`：
+
+```text
+https://eiz-mcp.wangyii.org/mcp
+```
+
+首次使用 MCP 时：
+
+1. 在 Claude Code 中运行 `/mcp`。
+2. 选择 `eiz-mcp`，完成 OAuth 授权。
+3. 如果刚安装插件后没有看到 MCP，运行 `/reload-plugins` 或重启 Claude Code。
+
+授权完成后，Claude Code 会根据 MCP Server 当前提供的工具进行搜索和调用。MCP 工具名称以当前会话显示的名称为准，不要使用其他客户端中的旧工具名。
 
 ## Skills
 
