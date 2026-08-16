@@ -48,16 +48,20 @@ eiz-claude-plugins/
 │   ├── marketplace.json
 │   └── plugin.json
 ├── .mcp.json
+├── commands/
+├── agents/
 ├── skills/
 │   ├── addon-generator/SKILL.md
 │   ├── eiz-mcp-guide/SKILL.md
 │   ├── grill-me/SKILL.md
 │   └── work-polish/SKILL.md
+├── hooks/
+├── scripts/
 ├── .gitignore
 └── README.md
 ```
 
-未使用的 `commands/`、`agents/`、`hooks/` 和 `scripts/` 不创建空目录；后续增加对应组件时再按 Claude Code 插件规范添加。
+`commands/`、`agents/`、`hooks/` 和 `scripts/` 目录暂时保留为空，后续增加对应组件时按 Claude Code 插件规范添加。
 
 ## 旧版本迁移
 
