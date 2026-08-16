@@ -9,7 +9,7 @@
 
 1. 调用 skill：
    ```
-   /addon-generator 参考 examples/dashboard/api.md --deploy --name eiz-dashboard
+   /eiz-claude-plugins:addon-generator 参考 examples/dashboard/api.md --deploy --name eiz-dashboard
    ```
 
 2. 部署前提条件：需要先安装 [Vercel CLI](https://vercel.com/cli) 并登录

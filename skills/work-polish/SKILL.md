@@ -11,8 +11,8 @@ argument-hint: [--轻度 | --重度] <你要说的话>
 ## 使用方式
 
 ```
-/work-polish --轻度 帮老王把登录页面的颜色改了，顺便加了个 loading 动画
-/work-polish --重度 明天要上线但还有 3 个 bug 没修完
+/eiz-claude-plugins:work-polish --轻度 帮老王把登录页面的颜色改了，顺便加了个 loading 动画
+/eiz-claude-plugins:work-polish --重度 明天要上线但还有 3 个 bug 没修完
 ```
 
 ## 模式说明

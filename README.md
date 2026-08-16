@@ -1,23 +1,23 @@
-# Eiz Claude Skills
+# EIZ Claude Plugins
 
-公司内部 Claude Code 插件集合。
+公司内部 Claude Code 插件集合，包含可复用 skills 和 EIZ Remote MCP 使用手册。
 
 ## 安装
 
 ```bash
-/plugin marketplace add yiguoguo/eiz-claude-skills
-/plugin install eiz-claude-skills@eiz-claude-skills
+/plugin marketplace add yiguoguo/eiz-claude-plugins
+/plugin install eiz-claude-plugins@eiz-claude-plugins
 ```
 
 ## Skills
 
-### `/addon-generator` — 接口文档转页面
+### `/eiz-claude-plugins:addon-generator` — 接口文档转页面
 
 根据 API 文档自动生成 lofko addon 页面，Claude 根据接口结构自动判断页面类型（表格/卡片/详情/图表），生成完整 Next.js + Tailwind 项目，可选 Vercel 一键部署。
 
 ```
-/addon-generator https://petstore.swagger.io/v2/swagger.json --deploy
-/addon-generator 一个商品库存查询接口，GET /api/inventory，返回商品名、SKU、数量、价格
+/eiz-claude-plugins:addon-generator https://petstore.swagger.io/v2/swagger.json --deploy
+/eiz-claude-plugins:addon-generator 一个商品库存查询接口，GET /api/inventory，返回商品名、SKU、数量、价格
 ```
 
 <details>
@@ -43,13 +43,13 @@
 
 ---
 
-### `/work-polish` — 职场语言包装
+### `/eiz-claude-plugins:work-polish` — 职场语言包装
 
 大白话变专业汇报语言，两种力度可选。
 
 ```bash
-/work-polish --轻度 帮老王改了登录页面的颜色
-/work-polish --重度 明天要上线但还有 3 个 bug 没修完
+/eiz-claude-plugins:work-polish --轻度 帮老王改了登录页面的颜色
+/eiz-claude-plugins:work-polish --重度 明天要上线但还有 3 个 bug 没修完
 ```
 
 **轻度**（日常周报）：
@@ -65,31 +65,35 @@
 
 ---
 
-### `/grill-me` — 需求拷问
+### `/eiz-claude-plugins:grill-me` — 需求拷问
 
 每轮问 2-3 个具体问题，持续挖掘需求里的漏洞、边界情况和隐含假设，直到确认没有歧义，最后输出结构化需求确认清单。
 
 ```bash
-/grill-me 做一个商品管理后台
-/grill-me 接入微信支付
+/eiz-claude-plugins:grill-me 做一个商品管理后台
+/eiz-claude-plugins:grill-me 接入微信支付
 ```
 
 ---
 
-### `/eiz-biz-query` — EIZ 业务数据查询
+### `/eiz-claude-plugins:eiz-mcp-guide` — EIZ Remote MCP 使用手册
 
-收到业务数据查询需求时（如查客户、查订单、查物流等），先查知识库获取查询规范和表结构，再用 MySQL 工具执行查询。
+项目内置 `eiz-mcp` Remote MCP 配置，地址为：
 
-**核心规范：**
-- 所有查询只读（SELECT / SHOW / DESCRIBE）
-- WHERE 条件命中索引字段，大表禁止 JOIN
-- 明细查询带 LIMIT（默认 ≤50 条）
-- 状态码翻译成中文，敏感信息脱敏
+```text
+https://eiz-mcp.wangyii.org/mcp
+```
 
-**前提：** 需要配置知识库检索工具（如 `knowledge_mcp_server-Retrieve_Documents`）和 MySQL 查询工具。
+首次使用时运行 `/mcp`，完成 OAuth 授权。授权后，Claude Code 会根据 MCP Server 当前提供的工具进行搜索和调用。
+
+使用手册：
+
+```text
+/eiz-claude-plugins:eiz-mcp-guide
+```
 
 ## 示例
 
-`examples/` 目录包含可直接作为 `/addon-generator` 输入的示例：
+`examples/` 目录包含可直接作为 `/eiz-claude-plugins:addon-generator` 输入的示例：
 
 - [examples/dashboard/](examples/dashboard/) — Dashboard 图表页面

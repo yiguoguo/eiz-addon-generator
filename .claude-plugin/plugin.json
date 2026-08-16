@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "eiz-claude-plugins",
+  "displayName": "EIZ Claude Plugins",
+  "version": "2.0.0",
+  "description": "EIZ 公司 Claude Code 插件集合，包含可复用 skills 与 Remote MCP 集成。",
+  "author": {
+    "name": "Yi Wang"
+  },
+  "repository": "https://github.com/yiguoguo/eiz-claude-plugins"
+}
