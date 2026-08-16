@@ -116,6 +116,6 @@ Claude 根据接口返回结构自主判断生成什么页面。判断依据：
 /eiz-claude-plugins:addon-generator 一个商品库存查询接口，GET /api/inventory，返回商品名、SKU、数量、价格
 ```
 
-## 示例参考
+## 参考
 
-`examples/dashboard/` 目录下有 Dashboard 类型页面的示例，包含 API 文档和页面效果说明，可作为生成时的风格参考。
+根据输入 API 的实际返回结构选择页面类型，并遵循本文件中的 UI 和认证约束。
