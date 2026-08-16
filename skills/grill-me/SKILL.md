@@ -10,12 +10,12 @@ disable-model-invocation: true
 
 ## 触发条件
 
-用户输入 `/grill-me` 后，附上他想要做的事情。
+用户输入 `/eiz-claude-plugins:grill-me` 后，附上他想要做的事情。
 
 ```
-/grill-me 做一个商品管理后台
-/grill-me 把登录页面改成深色模式
-/grill-me 接入微信支付
+/eiz-claude-plugins:grill-me 做一个商品管理后台
+/eiz-claude-plugins:grill-me 把登录页面改成深色模式
+/eiz-claude-plugins:grill-me 接入微信支付
 ```
 
 ## 工作方式

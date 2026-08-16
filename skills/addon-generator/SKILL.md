@@ -23,7 +23,7 @@ allowed-tools: ["Read", "Write", "Bash", "Grep", "Glob", "Task", "TaskCreate"]
 ## 使用方式
 
 ```
-/addon-generator <api-doc-or-url> [--deploy] [--name <project-name>]
+/eiz-claude-plugins:addon-generator <api-doc-or-url> [--deploy] [--name <project-name>]
 ```
 
 ## 参数说明
@@ -107,15 +107,15 @@ Claude 根据接口返回结构自主判断生成什么页面。判断依据：
 
 ```bash
 # OpenAPI 文档
-/addon-generator https://petstore.swagger.io/v2/swagger.json --deploy --name my-pet-store
+/eiz-claude-plugins:addon-generator https://petstore.swagger.io/v2/swagger.json --deploy --name my-pet-store
 
 # curl 命令
-/addon-generator curl -X GET "https://api.example.com/users" -H "Authorization: Bearer token" --deploy
+/eiz-claude-plugins:addon-generator curl -X GET "https://api.example.com/users" -H "Authorization: Bearer token" --deploy
 
 # 自然语言
-/addon-generator 一个商品库存查询接口，GET /api/inventory，返回商品名、SKU、数量、价格
+/eiz-claude-plugins:addon-generator 一个商品库存查询接口，GET /api/inventory，返回商品名、SKU、数量、价格
 ```
 
-## 示例参考
+## 参考
 
-`examples/dashboard/` 目录下有 Dashboard 类型页面的示例，包含 API 文档和页面效果说明，可作为生成时的风格参考。
+根据输入 API 的实际返回结构选择页面类型，并遵循本文件中的 UI 和认证约束。
