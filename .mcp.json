@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "eiz-mcp": {
-      "type": "http",
-      "url": "https://eiz-mcp.wangyii.org/mcp"
-    }
-  }
-}
